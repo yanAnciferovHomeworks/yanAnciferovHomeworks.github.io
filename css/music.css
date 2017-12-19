@@ -1,0 +1,55 @@
+@import url(elements.css) screen;
+
+main{
+    margin: 5em auto;
+    padding: 0 3em;
+    max-width: 1120px;
+   
+}
+
+
+
+.para-alboms:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.albom{
+    margin: 10px;
+    width: calc(25% - 20px);
+    float: left;
+}
+
+.albom img{
+    width: 100%;
+}
+
+.para-alboms {
+   margin-bottom: 3em;
+}
+
+
+
+.albom h3{
+    text-align: center;
+    font-weight: normal;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+
+
+@media (max-width: 900px)
+{
+    .albom{
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 550px)
+{
+    .albom{
+        width: calc(100% - 20px);
+    }
+}

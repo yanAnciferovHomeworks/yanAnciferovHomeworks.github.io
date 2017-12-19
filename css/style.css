@@ -1,0 +1,385 @@
+@import url(elements.css) screen;
+
+
+body, html{
+  font-size: 18px;
+   
+}
+
+
+header{
+  background: url(../img/bg-head.jpg) no-repeat right center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height:500px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.logo-img-wrapper{
+    position: absolute;
+  justify-content: center;
+  text-align:center;
+  min-height:500px;
+  height: 100vh;
+    width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img-wrapper img{
+    width: 50%;
+}
+
+.social-bar{
+  padding: 50px 20px;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+    z-index: 2;
+}
+
+i{
+  font-size: 1.5em;
+  margin-right: 25px;
+  color: white;
+}
+
+.social-bar  i{
+    font-size: 1.6em;
+}
+
+
+
+
+
+
+i:hover{
+  cursor: pointer;
+  color: #86b775;
+}
+
+
+
+
+#scroll-nav ul{
+  padding: 0 100px;
+  margin: 0;
+  text-transform: uppercase;
+  background-color: #333;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Droid Sans',Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+  height: 90px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#scroll-nav ul li{
+  
+  list-style: none;
+  line-height: 90px;
+  
+}
+
+#scroll-nav ul li a:hover{
+  color: #86b775;
+}
+
+
+
+#ravnovesie-i-glubina{
+  min-height:500px;
+  text-align:center;
+  height: 100vh;
+  background: url(../img/bg-section1.jpg) center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    padding: 0 10px;
+}
+
+#ravnovesie-i-glubina img{
+  transition: opacity 0.25s;
+    width: 100%;
+  max-width: 400px;
+}
+
+#ravnovesie-i-glubina img:hover {
+  opacity: 0.8;
+}
+
+#about{
+  height: 100vh;
+  min-height:500px;
+  background: url(../img/bg-about.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about h2{
+  font-weight: normal;
+   padding: 0;
+   margin: 20px 0;
+   text-align: center;
+   color: white;
+  
+   font-size: 2.5em;
+
+}
+
+.about-wrapper-content{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.about-social-bar{
+  text-align: center;
+  
+}
+
+.about-social-bar i{
+  color: #86b775;
+  font-size: 3.5em;
+}
+
+#afisha{
+  background: black;
+    background: transparent;
+  min-height: 100vh;
+  color: white;
+  padding: 80px 50px;
+}
+
+#afisha:after{
+    top:0;
+    left:0;
+    display: block;
+    position: fixed;
+    content: "";
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+      background: url(../img/bg-afisha.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+#afisha h3{
+  margin:70px 0 20px 0;
+  font-weight: normal;
+  font-size:   2.3em;
+}
+
+
+
+.afisha-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1.5px solid rgba(255,255,255,0.3);
+
+}
+
+.first{
+  border-top: 1.5px solid rgba(255,255,255,0.3);
+  border-bottom: 1.5px solid rgba(255,255,255,0.3);
+
+}
+
+.wrap-info{
+  flex-grow: 1;
+}
+
+.info{
+  padding-top: 10px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.afisha-vk i{
+  font-size:   2em;
+  color: #86b775;
+}
+
+.club{
+  font-size:   0.8em;
+}
+
+.city{
+  font-weight: bold;
+  font-size: 0.9em;
+    flex-grow:1;
+}
+
+.wrap-td{
+    flex-grow:1;
+}
+
+.td{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+table{
+    width: 100%;
+     border-collapse: collapse;
+}
+
+tr td:last-child
+{
+    text-align: center;
+}
+
+tr > td:first-child{
+    width: 3em;
+}
+
+
+
+td{
+   
+    padding: 20px 0;
+    border-top: 1.5px solid rgba(255,255,255,0.3);
+  border-bottom: 1.5px solid rgba(255,255,255,0.3);
+}
+
+
+#nav-static{
+    display: none;
+}
+
+.static-ul{
+    font-size: .8em;
+    padding: 1em 5em;
+}
+
+
+
+
+
+
+@media (max-height: 450px)
+{
+    .logo-img-wrapper,header,#ravnovesie-i-glubina,#about{
+
+   height: calc(100vh + 200px);
+        
+    }
+   
+}
+
+
+
+
+
+@media (max-width: 1030px)
+{
+  
+    #nav-static .menu-icon{
+        display: none;
+    }
+    .social-bar .menu-icon span{
+        position: fixed;
+        top: 45px;
+        right: 20px;
+    }
+    td.club{
+        display: none;
+    }
+    .sm-hidden{
+        margin-top: 10px;
+        display: inline-block;
+         font-weight: 100;
+    }
+    nav{
+        display: none;
+    }
+    
+    .social-bar{
+        justify-content: space-between;
+        padding-left: 60px;
+    }
+    
+   .menu-icon{
+        display: block;
+        font-size: 1.3em;
+    }
+    
+    .social{
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+@media (max-width: 640px)
+{
+    tr > td:last-child{
+        display: none;
+       
+    }  
+    .social-bar{
+        padding: 20px;
+        padding-right: 0;
+    }
+     .social-bar .menu-icon span{
+        top: 15px;
+        right: 20px;
+    }
+    #about h2{
+        margin: 0 50px;
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 479px)
+{
+    body,html{
+        font-size: 14px;
+    }
+    #scroll-nav{
+        display: none;
+    }
+    #main-logo{
+        
+    }
+    
+     #about h2{
+        margin: 0 10px;
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+     .social-bar .menu-icon span{
+        top: 15px;
+        right: 0;
+    }
+   
+}
+
+@media (min-width: 1031px)
+{
+    .sm-hidden{
+        display: none;
+    }
+    .menu-icon{
+        display: none;
+    }
+}
+
