@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        body{
+            background: #c7c6c9 url(img/background.png) no-repeat center center;
+            background-size: cover;
+            height: 100%;
+        }
+        
+        img{
+            position: absolute;
+        }
+
+        #img1{
+            top: 200px;
+            left: 150px;
+        }
+
+        #img2{
+            top: 130px;
+            left: 130px;
+        }
+        #img3{
+            top: 50px;
+            left: 300px;
+        }
+          #img4{
+            top: 480px;
+            left: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-wrapper">
+        <img id="img1" src="img/p1.png" alt="Alternate Text" />
+        <img id="img2" src="img/p2.png" alt="Alternate Text" />
+        <img id="img3" src="img/p3.png" alt="Alternate Text" />
+        <img id="img4" src="img/p4.png" alt="Alternate Text" />
+    </div>
+
+
+
+    <script>
+        document.body.onmousemove = function (event) {
+            console.log(event.clientX);
+            img1.style.left = 120 + (event.clientX / 30) + "px";
+            img2.style.left = 80 + (event.clientX / 10) + "px";
+            img3.style.left = 120 + (event.clientX / 6) + "px";
+            img4.style.left = 45 + (event.clientX / 4) + "px";
+        }
+    </script>
+</body>
+</html>
