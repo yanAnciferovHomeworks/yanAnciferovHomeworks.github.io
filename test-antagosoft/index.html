@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" >
+    <title>Вероника Ростова</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="consultantApp">
+    <div class="containe" ng-controller="consultantCtrl">
+        <div class="row information no-streach">
+            <div class="col-xs-4 zi">
+               <div class="information-avatar_wrapper">
+                <img class="information-avatar_img" src="img/avatar.jpg" alt="avatar">
+                </div>
+            </div>
+            <div class="col-xs-8 nopadding">
+               <div class="information-info_wrapper">
+                <h2 class="information-info_name">Вероника Ростова</h2>
+                <h3 class="information-info_worker">Менеджер по продажам</h3>
+                <p  class="information-info_description">
+                    Подберу для вас самые лучшие предложения.<br>
+                    Мои услуги абсолютно бесплатны
+                </p>
+               </div>
+            </div>
+        </div>
+
+        <div class="row no-streach">
+            <div class="col-xs-offset-4 col-xs-8 nopadding">
+               <div class="table">
+                   <div class="thead">
+                       <div class="col-xs-offset-10">Услуг</div>
+                   </div>
+                   
+                   <div class="tbody">
+                       <div class="tr">
+                            <div class="col-xs-10 ">
+                                <span>Ручное бронирование</span>
+                                <div class="progres green"></div>
+                            </div>
+                           <div class="col-xs-offset-10">11</div>
+                       </div>
+                       
+                       <div class="tr">
+                            <div class="col-xs-10">
+                               <span>Пакетные туры</span>
+                                <div class="progres blue1"></div>
+                            </div>
+                           <div class="col-xs-offset-10">3</div>
+                       </div>
+                       
+                       <div class="tr">
+                           <div class="col-xs-10">
+                               <span>Отели</span>
+                                <div class="progres blue2"></div>
+                           </div>
+                           <div class="col-xs-offset-10">1</div>
+                       </div>
+                   </div>
+                   
+                   <div class="tfoot">
+                      <div class="col-xs-10">Всего</div>
+                       <div class="col-xs-offset-10 all-service">15</div>
+                   </div>
+               </div>
+            </div>
+        </div>
+
+        <div class="reviews no-streach">
+            <div class="reviews-header">
+               <div>
+                    <h3 class='reviews-head'>Последние отзывы</h3>
+                    <a class='reviews-all' href="#">Все отзывы</a>
+               </div>
+               <div>
+                    <span class="reviews-likes">
+                        <i><img src="img/icons/like-icons.png" alt=""></i>
+                        <span>131</span>
+                    </span>
+                    <span class="reviews-coments">
+                         <i><img src="img/icons/coomment-icon.png" alt=""></i>
+                        <span>14</span>
+                    </span>
+               </div>
+            </div>
+            <div class="reviews-list" >
+                <div class="review" ng-repeat="rev in reviews">
+                    <div class="reviews-name">{{rev.name}}</div>
+                    <div class="reviews-date">{{rev.date}}</div>
+                    <div class="reviews-message">
+                        <span class="reviews-message_text">
+                        {{rev.message}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="message-wrapper">
+          <div class="depozit">
+              <div class="no-streach">
+                  <span class="depozit-info">
+                      * 500 Р — это депозит, мы вернем вам эти деньги после первой продажи.
+                  </span>
+              </div>
+          </div>
+           <div class="no-streach">
+               <form id="messageForm" name="messageForm" novalidate ">
+                   <div class="message-name_wrapper" ng-hide="toched">
+                       <label>Ваше имя: </label>
+                       <input ng-keydown="onKeyDown($event)" ng-pattern="/.{2}/" required type="text" ng-model="newReviews.name" class="message-name" />
+                   </div>
+                   <div class="message-textarea_wrapper">
+                       <label  ng-hide="toched">Ваше сообщение: </label>
+                       <textarea ng-keydown="onKeyDown($event)" ng-pattern="/.{2}/" required ng-click="activeTextarea()" ng-model="newReviews.message" class="message-textarea"></textarea>
+                   </div>
+                   <div class="message-button_wrapper">
+                       <button class="message-button" ng-click="send(messageForm)">Написать консультанту</button>
+                   </div>
+               </form>
+           </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="js/lib/angular.min.js"></script>
+    <script>
+        angular.module("consultantApp",[]);
+    </script>
+    <script src="js/controllers/consultantCtrl.js"></script>
+</body>
+</html>
